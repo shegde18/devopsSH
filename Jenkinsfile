@@ -3,13 +3,6 @@ pipeline
     agent any
     stages
     {
-        stage('Github SCM Checkout')
-        {       
-            steps
-            {
-                sh 'echo "Downloading code from github"'
-            }
-        }
 
         stage('Execute unit test cases')
         {
