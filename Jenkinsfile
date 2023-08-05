@@ -3,15 +3,15 @@ pipeline
     agent any
     stages
     {
-        stage('display hello')
+        stage('Github SCM Checkout')
         {       
             steps
             {
-                sh 'echo "Hi Jenkins"'
+                sh 'echo "Downloading code from github"'
             }
         }
 
-        stage('build')
+        stage('Execute unit test cases')
         {
             steps
             {
@@ -19,11 +19,11 @@ pipeline
             }
         }
 
-        stage('test')
+        stage('Code Build')
         {
             steps
             {
-                sh 'echo "Testing the code"'
+                sh 'echo "Building the code"'
             }
         }
     }
